@@ -62,15 +62,15 @@ div.video { width: 73%; height: 600px; background-color: blue; display: flex;
 
 div.video div { width: 32%; height: 42%; background-color: gold;}
 
-div.upper { width: 25%; height: 500px; background-color: yellowgreen; display: flex;
+div.upper { width: 25%; height: 460px; background-color: yellowgreen; display: flex;
     flex-flow: row wrap; justify-content: center;align-content: space-between;
     margin-top:-150px;}
 
 
-div.upper table {width: 100%;}
-div.upper table td {padding:8px; text-align: left; font-size:11pt;
+div.upper .table {width: 100%;}
+div.upper .table div {padding:8px; text-align: left; font-size:11pt;
 border-bottom:1px solid #919191; transition:0.05s;}
-div.upper table td:hover {padding:20px 8px 20px 8px;}
+div.upper .table div:hover {padding:20px 8px 20px 8px;}
 
 #wrap3 .content { height:300px; background-color: aqua; display:flex; flex-flow:row wrap; justify-content: space-between; align-items: flex-end; margin-bottom:20px;}
 #wrap3 p {width: 100%;}
@@ -86,6 +86,10 @@ div.upper table td:hover {padding:20px 8px 20px 8px;}
 .come {width:80px; height:100px; background-color: yellowgreen; position:fixed;
     bottom: 15px; right:10%; border-radius:18px; padding:5px; text-align: center;}
 
+    #wrap3, #wrap4 {background-color: #b6b6b6;}
+
+
+
 
     
 @media screen and (max-width:1099px) {
@@ -93,7 +97,6 @@ div.upper table td:hover {padding:20px 8px 20px 8px;}
 }
 
 @media screen and (max-width:860px){
-
     #header ul {
         display: flex; flex-flow: row wrap; text-align: center;}
     #header li { width:28%; font-size: 1.2em; padding:7px;}
@@ -113,7 +116,7 @@ div.upper table td:hover {padding:20px 8px 20px 8px;}
        border-radius: 300px; margin-top: 0; margin-left:20px;}
 
        
-       #wrap2 .content {flex-flow: row wrap; justify-content: space-between;}
+       #wrap2 .content {flex-flow: row wrap; justify-content: flex-end;}
     
     
     div.video { width: 100%; height: 400px; background-color: blue; display: flex;}
@@ -121,11 +124,16 @@ div.upper table td:hover {padding:20px 8px 20px 8px;}
     div.video div { width: 32%; height: 42%; background-color: gold;}
     
     div.upper { width: 48%; height: 250px; background-color: yellowgreen; display: flex;
-        flex-flow: row wrap; justify-content: right;align-content: space-between;
-        margin-top:-700px; margin-left:420px;right:0;}
+        flex-flow: row wrap; justify-content:flex-end; align-content: space-between;
+        margin-top:-670px; right:0;}
 
-div.upper table {width: 100%;}
-div.upper table td {padding:3px; font-size:0.5em;
-border-bottom:1px solid #919191; transition:0.05s;}
-div.upper table td:hover {padding:3px;}
+div.upper .table {width: 100%; display:flex; flex-flow:row wrap; align-content: space-between;}
+div.upper .table div { width: 49%;font-size:0.9em; padding:7px;}
+div.upper .table div:hover {padding:15px 8px 15px 8px;}
+
+#wrap3 p {width: 100%;}
+#wrap3 .content > div {width:24%; height:80%; background-color: bisque;}
+
+#wrap3 .content > div:last-of-type{display:none;}
+
 }
