@@ -1,23 +1,18 @@
 @charset "utf-8";
 
-:root {
-    --white:#fff;
-    --gray:#424242;
-}
+:root[theme='light'] {--background:#fff; --color:#666}
 
 #Main_Page {
  width:100%;}
 
 .content{
 width: 1100px; height: 100%; margin: 0 auto;
-border-left:1px solid red; border-right:1px solid red;
 position:relative; }
 
 button {position:absolute; top:30%; left:0;}
 
-#header {border-top:1px solid red; border-bottom:1px solid red;}
 #header .content {
-    background-color: pink; display: flex;
+    display: flex;
     flex-flow: column wrap; align-items: center;}
 
 img[alt="logo"] { width: 200px; height: auto; margin: 30px 0 30px 0;}
@@ -30,53 +25,72 @@ img[alt="logo"] { width: 200px; height: auto; margin: 30px 0 30px 0;}
 
 
 #DJ_Slider {
-    background-color: skyblue; width: 100%; height: 700px; margin: 20px 0 20px 0;}
+    background-color: skyblue; width: 100%; margin: 20px 0 20px 0; overflow:hidden; max-height: 700px; position:relative;}
 
-.bfore {width: 100%; font-size: 15pt; font-weight: 500; margin: 0 0 20px 0;}
+    #DJ_Slider video {width:100%;}
+
+.bfore {width: 100%; font-size: 15pt; font-weight: 500; margin: 0 0 20px 0; color:var(--gray);}
 
 
-#wrap1 {border-top:1px solid red; border-bottom:1px solid red;}
 #wrap1 .content { display: flex; flex-flow: row nowrap; justify-content: space-between;}
 
 div.ChartIn {
-    width: 73%; height: 600px; background-color: blue;display: flex;
+    width: 73%; height: 600px; display: flex;
     flex-flow: row wrap; justify-content: space-between; align-content: space-between;}
 
-div.ChartIn div { width: 49%; height: 17%; background-color: gold;}
+div.ChartIn div { width: 49%; height: 17%; display:flex; position:relative;}
+.ChartIn div p {padding-left:20px; padding-top:10px;}
+.ChartIn p span {font-size:18PX;}
+div.ChartIn div div {height:100%;}
+div.ChartIn img[alt="hover"] {position:absolute; height:100%; opacity:0; transition: 0.2s;}
+div.ChartIn img[alt="hover"]:hover {opacity:1; cursor:pointer;}
 
-div.MyMelon { width: 25%; height: 450px; background-color: yellowgreen; display: flex;
+
+div.MyMelon { width: 25%; height: 450px; display: flex;
      flex-flow: row wrap; justify-content: center;align-content: flex-start;}
 
 div.MyMelon div { width: 200px; height: 200px; background-color: brown;
-    border-radius: 300px; margin-top: 20px;}
+    border-radius: 300px; margin-top: 20px; overflow:hidden;}
 
+    .MyMelon img {width: 100%;}
 
-#wrap2 {border-top:1px solid red; border-bottom:1px solid red;}
 
 #wrap2 .content { margin:20px auto 80px auto; display: flex;
     flex-flow: row nowrap; justify-content: space-between;}
 
 
-div.video { width: 73%; height: 600px; background-color: blue; display: flex;
+div.video { width: 73%; height: 450px; display: flex;
     flex-flow: row wrap; justify-content: space-between; align-content: space-between; }
 
-div.video div { width: 32%; height: 42%; background-color: gold;}
+div.video div { width: 32%; height: 40%; font-size:12px;}
+div.video div span {font-weight:500; color:#00CD3C}
+div.video div img {width:100%; }
 
-div.upper { width: 25%; height: 460px; background-color: yellowgreen; display: flex;
+div.upper { width: 25%; height: 460px; display: flex;
     flex-flow: row wrap; justify-content: center;align-content: space-between;
     margin-top:-150px;}
 
+    .upper .bfore {text-align: right; margin-top:20px;}
+
 
 div.upper .table {width: 100%;}
-div.upper .table div {padding:8px; text-align: left; font-size:11pt;
-border-bottom:1px solid #919191; transition:0.05s;}
-div.upper .table div:hover {padding:20px 8px 20px 8px;}
+div.upper .table div {padding:8px; text-align: right; font-size:11pt;transition:0.05s;}
+div.upper .table div:hover {padding:20px 8px 20px 8px; background-color: #eeeeee;}
 
-#wrap3 .content { height:300px; background-color: aqua; display:flex; flex-flow:row wrap; justify-content: space-between; align-items: flex-end; margin-bottom:20px;}
+#wrap3 .content { height:300px; display:flex; flex-flow:row wrap; justify-content: space-between; align-items: flex-end; margin-bottom:20px;}
 #wrap3 p {width: 100%;}
-#wrap3 .content > div {width:19%; height:80%; background-color: bisque;}
+#wrap3 .content > div {width:19%; height:80%;}
+
+#wrap3 div div p span {font-size:12px; opacity:0.7; line-height: 40px;}
+#wrap3 div div img { width:100%;}
+
+.dj {color:#919191}
+.dj span{font-weight:500; color:#00CD3C;}
+
+.tag { font-size: 10pt; padding:5px 10px; border-radius: 50px; border:1px solid #919191}
 
 .group {padding-top: 80px;}
+
 
 #wrap4 {height:100px; margin:100px 0 180px 0; }
 #wrap4 .content {background-color: aqua;}
@@ -86,17 +100,23 @@ div.upper .table div:hover {padding:20px 8px 20px 8px;}
 .come {width:80px; height:100px; background-color: yellowgreen; position:fixed;
     bottom: 15px; right:10%; border-radius:18px; padding:5px; text-align: center;}
 
-    #wrap3, #wrap4 {background-color: #b6b6b6;}
+    #wrap4 {overflow:hidden;}
+    #wrap4 img {height:100%;}
+
+    .player .content {margin:0 auto;}
+    .player img {height:90%;}
 
 
-
+    @media screen and (min-width:1100px) {
+        div.ChartIn img[alt="plus"] {display:block; scale: 0.8;}
+    }
 
     
 @media screen and (max-width:1099px) {
     .content {width:100%;}
 }
 
-@media screen and (max-width:860px){
+@media screen and (max-width:700px){
     #header ul {
         display: flex; flex-flow: row wrap; text-align: center;}
     #header li { width:28%; font-size: 1.2em; padding:7px;}
@@ -104,12 +124,15 @@ div.upper .table div:hover {padding:20px 8px 20px 8px;}
     #wrap1 .content {flex-flow:row wrap;}
     
     div.ChartIn {
-        width: 100%; height: 400px; background-color: blue;display: flex;
+        width: 100%; height: 400px;display: flex;
         flex-flow: row wrap; justify-content: space-between; align-content: space-between;}
     
-    div.ChartIn div { width: 50%; height: 20%; background-color: gold;}
+    div.ChartIn div { width: 50%; height: 20%; }
 
-    div.MyMelon { margin-top:70px; width: 48%; height:250px; background-color: yellowgreen; display: flex;
+    div.ChartIn div img {height: 95%;}
+    div.ChartIn img[alt="hover"] {height:95%;}
+
+    div.MyMelon { margin-top:70px; width: 48%; height:250px; display: flex;
         flex-flow: row wrap; justify-content: left;align-content: center;}
    
    div.MyMelon div { width: 150px; height: 150px; background-color: brown;
@@ -119,11 +142,13 @@ div.upper .table div:hover {padding:20px 8px 20px 8px;}
        #wrap2 .content {flex-flow: row wrap; justify-content: flex-end;}
     
     
-    div.video { width: 100%; height: 400px; background-color: blue; display: flex;}
+    div.video { width: 100%; height: 400px; display: flex;}
     
-    div.video div { width: 32%; height: 42%; background-color: gold;}
+    div.video div { width: 32%; height: 42%;overflow:hidden;}
+    div.video div img {max-height: 144px;;}
+
     
-    div.upper { width: 48%; height: 250px; background-color: yellowgreen; display: flex;
+    div.upper { width: 48%; height: 250px; display: flex;
         flex-flow: row wrap; justify-content:flex-end; align-content: space-between;
         margin-top:-670px; right:0;}
 
@@ -132,8 +157,9 @@ div.upper .table div { width: 49%;font-size:0.9em; padding:7px;}
 div.upper .table div:hover {padding:15px 8px 15px 8px;}
 
 #wrap3 p {width: 100%;}
-#wrap3 .content > div {width:24%; height:80%; background-color: bisque;}
+#wrap3 .content > div {width:24%; height:80%;}
 
 #wrap3 .content > div:last-of-type{display:none;}
 
 }
+
