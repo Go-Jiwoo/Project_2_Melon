@@ -15,14 +15,30 @@
         $(document).ready(function(){
             $("#btn").click(function(){
                 $("*").toggleClass("dark");
-                $("div.video div span").css("color","#ffffff");
                 if($(this).hasClass("dark")){
                     $("#btn img").attr("src","img/dark.png");
+                    $("div.video div span").css("color","#ffffff");
+                    $("#btn2 img").attr("src","img/searchlight.svg");
+                    $("#Main_Page,#btn2 button, #btn2 input").css("background-color","rgb(34,34,34)");
+                    $("div.ChartIn div:hover").css("background","#111111");
+                    
                 }else{
                     $("#btn img").attr("src","img/light.png");
+                    $("div.video div span").css("color","#00CD3C");
+                    $("#btn2 img").attr("src","img/search.svg");
+                    $("#Main_Page,#btn2 button, #btn2 input").css("background-color","#ffffff");
+                    $("div.ChartIn div:hover").css("background","#f0f0f0");
                 }
-                
             });
+
+            $("#btn2 img").click(function(){
+                $("div").toggleClass("search");
+                if($("div #btn2").hasClass("search")){
+                    $("input").css("display","block");
+                }else{$("input").css("display","none")}
+            });
+
+            $();
         });
     </script>
 
@@ -33,6 +49,7 @@
             <div class="content">
                 <button id="btn"><img src="img/light.png" alt=""></button>
                 <a href="index.html"><img src="img/Logo.svg" alt="logo"></a>
+                <div id="btn2"><input type="text" placeholder="검색어를 입력하세요."><button><img src="img/search.svg" alt=""></button></div>
                 <ul>
                     <li>Top100</li>
                     <li>장르</li>
@@ -44,12 +61,15 @@
                     <li>이용권구매</li>
                     <li>다운로드</li>
                 </ul>
+                
             </div>
         </div>
 
         
         <div id="DJ_Slider">
-                <video src="img/slider.mp4"></video>
+            <div class="content">안녕하세요</div>
+            <video src="img/slider.mp4" autoplay muted loop></video>
+                
         </div>
 
 
@@ -58,36 +78,96 @@
             <div class="content">
                 <div class="ChartIn">
                     <p class="bfore">국내 Top100</p>
-                    <div><img src="img/afterlike.jpg" alt="">
-                        <img src="file/play.png" alt="hover">
-                        <p><span>After Like</span> <br> IVE</p></div>
-                    <div><img src="img/creamsoda.jpg" alt="">
-                        <img src="file/play.png" alt="hover">
-                        <p><span>Cream Soda</span> <br> EXO</p></div>
-                    <div><img src="img/cupid.jpg" alt="">
-                        <img src="file/play.png" alt="hover">
-                        <p><span>Cupid</span> <br> Fifty Fifty</p></div>
-                    <div><img src="img/flower.jpg" alt="">
-                        <img src="file/play.png" alt="hover">
-                        <p><span>Flower</span> <br> Jisoo</p></div>
-                    <div><img src="img/hikey.jpg" alt="">
-                        <img src="file/play.png" alt="hover">
-                        <p><span>건물 사이에 피어난 장미</span> <br> Hi-key</p></div>
-                    <div><img src="img/kitch.jpg" alt="">
-                        <img src="file/play.png" alt="hover">
-                        <p><span>Kistch</span> <br> IVE</p></div>
-                    <div><img src="img/queencard.jpg" alt="">
-                        <img src="file/play.png" alt="hover">
-                        <p><span>퀸카(Queencard)</span> <br> I-dle</p></div>
-                    <div><img src="img/sonogong.jpg" alt="">
-                        <img src="file/play.png" alt="hover">
-                        <p><span>손오공</span> <br> Seventeen</p></div>
-                    <div><img src="img/spicy.jpg" alt="">
-                        <img src="file/play.png" alt="hover">
-                        <p><span>Spicy</span> <br> aespa</p></div>
-                    <div><img src="img/supershy.jpg" alt="">
-                        <img src="file/play.png" alt="hover">
-                        <p><span>Super Shy</span> <br> NewJeans</p></div>
+                    <div>
+                        <div>
+                            <img src="img/afterlike.jpg" alt="">
+                            <img src="img/play.svg" alt="hover">
+                            <p><span>After Like</span> <br> IVE</p>
+                        </div>
+                        <button>⋮</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/creamsoda.jpg" alt="">
+                            <img src="img/play.svg" alt="hover">
+                            <p><span>Cream Soda</span> <br> EXO</p>
+                        </div>
+                        <button>⋮</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/cupid.jpg" alt="">
+                            <img src="img/play.svg" alt="hover">
+                            <p><span>Cupid</span> <br> Fifty Fifty</p>
+                        </div>
+                        <button>⋮</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/flower.jpg" alt="">
+                            <img src="img/play.svg" alt="hover">
+                            <p><span>Flower</span> <br> Jisoo</p>
+                        </div>
+                        <button>⋮</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/hikey.jpg" alt="">
+                            <img src="img/play.svg" alt="hover">
+                            <p><span>건물 사이에 피어난 장미</span> <br> Hi-key</p>
+                        </div>
+                        <button>⋮</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/kitch.jpg" alt="">
+                            <img src="img/play.svg" alt="hover">
+                            <p><span>Kistch</span> <br> IVE</p>
+                        </div>
+                        <button>⋮</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/queencard.jpg" alt="">
+                            <img src="img/play.svg" alt="hover">
+                            <p><span>퀸카(Queencard)</span> <br> I-dle</p>
+                        </div>
+                        <button>⋮</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/sonogong.jpg" alt="">
+                            <img src="img/play.svg" alt="hover">
+                            <p><span>손오공</span> <br> Seventeen</p>
+                        </div>
+                        <button>⋮</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/spicy.jpg" alt="">
+                            <img src="img/play.svg" alt="hover">
+                            <p><span>Spicy</span> <br> aespa</p>
+                        </div>
+                        <button>⋮</button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="img/supershy.jpg" alt="">
+                            <img src="img/play.svg" alt="hover">
+                            <p><span>Super Shy</span> <br> NewJeans</p>
+                        </div>
+                        <button>⋮</button>
+                    </div>
+
                 </div>
                 <div class="MyMelon">
                     <p class="bfore">마이멜론</p>
@@ -112,23 +192,9 @@
                 <div><img src="img/tv/zero.jpg" alt="">
                 <span>ZEROBASEONE </span>[멜론의 전당] ZEROBASEONE의 가장 눈부신 지금, ZEROSE에게 줄게</div>
                 <div><img src="img/tv/kim.jpg" alt="">
-                <span>김호중 </span>[Special Clip] 김호중(Kim Ho-Joong) <br>- 친구</div>
+                <span>김호중 </span>[Special Clip] 김호중(Kim Ho-Joong) - 친구</div>
             </div>
-            <div class="upper">
-                <p class="bfore">급상승</p>
-                <div class="table">
-                    <div>1. NewJeans</div>
-                    <div>2. NCT DREAM</div>
-                    <div>3. 오마이걸 (OH MY GIRL)</div>
-                    <div>4. 정국</div>
-                    <div>5. IVE (아이브)</div>
-                    <div>6. 세븐틴 (SEVENTEEN)</div>
-                    <div>7. 방탄소년단</div>
-                    <div>8. (여자) 아이들</div>
-                    <div>9. 임영웅</div>
-                    <div>10. LE SSERAFIM (르세라핌)</div>
-                </div>
-            </div>
+            
             </div>
         </div>
 
