@@ -2,6 +2,12 @@
 
 :root[theme='light'] {--background:#fff; --color:#666}
 
+.dark {background-color: rgb(34, 34, 34); color:rgb(230, 230, 230);}
+
+#btn {border:none; background-color: white; outline:none; width:20px; height:20px; cursor:pointer;}
+
+#btn img {width:20px; height:20px;}
+
 #Main_Page {
  width:100%;}
 
@@ -21,15 +27,19 @@ img[alt="logo"] { width: 200px; height: auto; margin: 30px 0 30px 0;}
     display: flex; justify-content: space-between;
     width: 100%; margin: 10px 0 10px 0;}
 
-#header li {font-size: 1.5em; font-weight: 400; display: block;}
+#header li {font-size: 1.5em; font-weight: 400; display: block; overflow:hidden; }
+
+#header li:before {width:100px; height:3px; background-color: #00CD3C; transform:translateX(-150px)}
+
+
 
 
 #DJ_Slider {
-    background-color: skyblue; width: 100%; margin: 20px 0 20px 0; overflow:hidden; max-height: 700px; position:relative;}
+    width: 100%; margin: 20px 0 20px 0; overflow:hidden; max-height: 700px; position:relative;}
 
     #DJ_Slider video {width:100%;}
 
-.bfore {width: 100%; font-size: 15pt; font-weight: 500; margin: 0 0 20px 0; color:var(--gray);}
+.bfore {width: 100%; font-size: 15pt; font-weight: 500; margin: 0 0 20px 0;}
 
 
 #wrap1 .content { display: flex; flex-flow: row nowrap; justify-content: space-between;}
@@ -92,7 +102,7 @@ div.upper .table div:hover {padding:20px 8px 20px 8px; background-color: #eeeeee
 .group {padding-top: 80px;}
 
 
-#wrap4 {height:100px; margin:100px 0 180px 0; }
+#wrap4 {width: 100%; margin:100px 0 180px 0; }
 #wrap4 .content {background-color: aqua;}
 
 .player .content {width:100%; height:85px; background-color: green; position:fixed; bottom:0;}
