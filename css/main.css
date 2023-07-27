@@ -96,7 +96,7 @@ div.MyMelon div { width: 200px; height: 200px; background-color: brown;
     flex-flow: row nowrap; justify-content: space-between;}
 
 
-div.video { width: 100%; height: 500px; display: flex;
+div.video { width: 100%; display: flex;
     flex-flow: row wrap; justify-content: space-between; align-content: space-between; }
 
 div.video div { width: 32%; height: 40%; font-size:12px;}
@@ -105,7 +105,7 @@ div.video div img {width:100%; }
 
 
 #wrap3 {line-height: 30px;}
-#wrap3 .content { height:300px; display:flex; flex-flow:row wrap; justify-content: space-between; align-items: flex-end; margin-bottom:20px; position:relative;}
+#wrap3 .content {display:flex; flex-flow:row wrap; justify-content: space-between; align-items: flex-start; margin-bottom:20px; position:relative;}
 #wrap3 p {width: 100%; line-height: 20px;}
 #wrap3:first-child p {line-height:25px;}
 #wrap3 .content > div {width:19%; height:80%;}
@@ -142,10 +142,12 @@ div.video div img {width:100%; }
 
     
 @media screen and (max-width:1099px) {
-    .content {width:100%;}
+    .content {width:90%;}
 }
 
 @media screen and (max-width:700px){
+    .content {width: 90%;}
+
     #header ul {
         display: flex; flex-flow: row wrap; text-align: center;}
     #header li { width:28%; font-size: 1.2em; padding:7px;}
@@ -161,7 +163,7 @@ div.video div img {width:100%; }
     div.ChartIn div img {height: 95%;}
     div.ChartIn img[alt="hover"] {height:95%;}
 
-    div.MyMelon { margin-top:70px; width: 100%; height:250px; display: flex;
+    div.MyMelon { margin-top:70px; width: 100%; height:200px; display: flex;
         flex-flow: row wrap; justify-content: left; align-content: center;}
    
    div.MyMelon div { width: 150px; height: 150px; background-color: brown;
@@ -173,17 +175,20 @@ div.video div img {width:100%; }
        #wrap2 .content {flex-flow: row wrap; justify-content: flex-end;}
     
     
-    div.video { width: 100%; height: 400px; display: flex;}
+    div.video { height: 400px; display: flex;}
     
-    div.video div { width: 32%; height: 42%;overflow:hidden;}
+    div.video div { width: 45%; height: 42%;overflow:hidden;}
     div.video div img {max-height: 144px;;}
 
     
-
+#wrap3 {margin:80px 0;}
 #wrap3 p {width: 100%;}
-#wrap3 .content > div {width:24%; height:80%;}
+#wrap3 .content > div {width:45%; height:80%;}
 
 #wrap3 .content > div:last-of-type{display:none;}
+
+#wrap4 {height:300px;}
+#wrap4 img {height:150%;}
 
 }
 
