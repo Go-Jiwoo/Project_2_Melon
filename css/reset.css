@@ -5,6 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 
-*{margin:0; padding:0; box-sizing: border-box; font-family:"Noto Sans KR"; color:#333; letter-spacing: -1px;}
+*{margin:0; padding:0; box-sizing: border-box; font-family:"Noto Sans KR"; color:#333; letter-spacing: 0px;}
 
-ul, li, ol {list-style-type: none;}
+ul, li, ol {list-style-type: none; text-decoration: none;}

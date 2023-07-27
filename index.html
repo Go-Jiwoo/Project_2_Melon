@@ -19,15 +19,23 @@
                     $("#btn img").attr("src","img/dark.png");
                     $("div.video div span").css("color","#ffffff");
                     $("#btn2 img").attr("src","img/searchlight.svg");
-                    $("#Main_Page,#btn2 button, #btn2 input").css("background-color","rgb(34,34,34)");
-                    $("div.ChartIn div:hover").css("background","#111111");
+                    $("html, #btn2 button, #btn2 input, div.ChartIn div").css("background-color","rgb(34,34,34)");
+                    $("div.ChartIn div").hover(function(){
+                        $(this).css("background","#111111");
+                    },function(){
+                        $(this).css("background","#222222");
+                    });
                     
                 }else{
                     $("#btn img").attr("src","img/light.png");
                     $("div.video div span").css("color","#00CD3C");
                     $("#btn2 img").attr("src","img/search.svg");
-                    $("#Main_Page,#btn2 button, #btn2 input").css("background-color","#ffffff");
-                    $("div.ChartIn div:hover").css("background","#f0f0f0");
+                    $("html ,#btn2 button, #btn2 input,div.ChartIn div").css("background-color","#ffffff");
+                    $("div.ChartIn div").hover(function(){
+                        $(this).css("background","#f0f0f0");
+                    },function(){
+                        $(this).css("background","#ffffff");
+                    });
                 }
             });
 
@@ -37,8 +45,6 @@
                     $("input").css("display","block");
                 }else{$("input").css("display","none")}
             });
-
-            $();
         });
     </script>
 
@@ -50,7 +56,8 @@
                 <button id="btn"><img src="img/light.png" alt=""></button>
                 <a href="index.html"><img src="img/Logo.svg" alt="logo"></a>
                 <div id="btn2"><input type="text" placeholder="검색어를 입력하세요."><button><img src="img/search.svg" alt=""></button></div>
-                <ul>
+
+                <ul id="fromInsideOut">
                     <li>Top100</li>
                     <li>장르</li>
                     <li>멜론TV</li>
@@ -172,10 +179,13 @@
                 <div class="MyMelon">
                     <p class="bfore">마이멜론</p>
                     <div><img src="img/profile.jpg" alt=""></div>
+                    <p class="name">고지우 님 &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/grayset.svg" alt="setting"><br>
+                         <span>2002.05.19</span> <span>2023.04.23</span><br>
+                    <span>#R&B</span> <span>#잔잔한</span> <span>#숨듣명</span></p>
                 </div>
             </div>
         </div>
-
+<br><br><br>
 
         <div id="wrap2">
             <div class="content">
@@ -229,6 +239,8 @@
             <span class="tag">#드라이브</span> <span class="tag">#기분전환</span></div>
         </div>
     </div>
+
+   
     <br><br><br><br><br><br>
     
         <div id="wrap3">
@@ -272,7 +284,7 @@
     </div>
 
         <div id="wrap4">
-            <div class="content"><img src="img/muwa.jpg" alt=""></div>
+            <div class="content"><img src="img/muwa.svg" alt=""></div>
         </div>
 
         <div class="player">
