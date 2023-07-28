@@ -1,194 +1,578 @@
 @charset "utf-8";
 
-.none {display:none;}
+.none {
+    display: none;
+}
 
-#fromInsideOut li {display:inline-block; cursor:pointer; transition:all 250ms ease-out;}
-#fromInsideOut li:after {content:""; display: block; border-bottom: 3px solid #00CD3C; transition: all 250ms ease-out;transform:scaleX(0);}
-#fromInsideOut li:hover {color:#00CD3C}
-#fromInsideOut li:hover:after {transition: all 250ms ease-out; transform:scaleX(1);}
+#fromInsideOut li {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 250ms ease-out;
+}
+
+#fromInsideOut li:after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #00CD3C;
+    transition: all 250ms ease-out;
+    transform: scaleX(0);
+}
+
+#fromInsideOut li:hover {
+    color: #00CD3C
+}
+
+#fromInsideOut li:hover:after {
+    transition: all 250ms ease-out;
+    transform: scaleX(1);
+}
 
 
-.dark {color:rgb(230, 230, 230);}
-#btn2.search {width:300px;border:1px solid #00CD3C;}
-#btn2 img {width:20px; height:20px;}
+.dark {
+    color: rgb(230, 230, 230);
+}
 
-#btn2 input {font-size:14px; width:200px; border:none; outline:none; margin-left:10px; display:none;}
 
-#btn {border:none; background-color: white; outline:none; width:15px; height:15px; cursor:pointer;}
+#btn2.search {
+    width: 300px;
+    border: 1px solid #00CD3C;
+}
 
-#btn2 button {border:none; background-color: white; outline:none; width:20px; height:20px; position:absolute; right:10px; cursor:pointer;}
-#btn2 {width:35px; height:35px; border-radius: 30px; border:1px solid rgba(0,0,0,0);  padding:8px; transition:0.2s; text-align: right; position:relative; display:flex;}
+#btn2 img {
+    width: 20px;
+    height: 20px;
+}
 
-#btn img {width:20px; height:20px;}
+#btn2 input {
+    font-size: 14px;
+    width: 200px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    display: none;
+}
+
+#btn {
+    border: none;
+    background-color: white;
+    outline: none;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+#btn2 button {
+    border: none;
+    background-color: white;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+#btn2 {
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 8px;
+    transition: 0.2s;
+    text-align: right;
+    position: relative;
+    display: flex;
+}
+
+#btn img {
+    width: 20px;
+    height: 20px;
+}
 
 #Main_Page {
- width:100%;}
+    width: 100%;
+}
 
-.content{
-width: 1100px; height: 100%; margin: 0 auto;
-position:relative; }
+.content {
+    width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
 
-#btn {position:absolute; top:35%; left:0;}
-#btn2 {position:absolute; top:30%; right:0;}
+#btn {
+    position: absolute;
+    top: 35%;
+    left: 0;
+}
+
+#btn2 {
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
 
 
 #header .content {
     display: flex;
-    flex-flow: column wrap; align-items: center; justify-content: space-between;}
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 
-img[alt="logo"] { width: 200px; height: auto; margin: 30px 0 30px 0;}
+img[alt="logo"] {
+    width: 200px;
+    height: auto;
+    margin: 30px 0 30px 0;
+}
 
 #header ul {
-    display: flex; justify-content: space-between;
-    width: 100%; margin: 10px 0 10px 0;}
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
 
-#header li {font-size: 1.5em; font-weight: 400; display: block; overflow:hidden; }
+#header li {
+    font-size: 1.5em;
+    font-weight: 400;
+    display: block;
+    overflow: hidden;
+}
 
 
 
 
 #DJ_Slider {
-    width: 100%; height:70%; margin: 20px 0 20px 0; overflow:hidden; max-height: 700px; display:flex; align-items: center; position:relative;}
+    width: 100%;
+    height: 70%;
+    margin: 20px 0 20px 0;
+    overflow: hidden;
+    max-height: 700px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-    #DJ_Slider video {width:100%;}
+#DJ_Slider video {
+    width: 100%;
+}
 
-    #DJ_Slider div {font-size:50px; color:red; position: absolute;}
+#DJ_Slider div {
+    font-size: 50px;
+    color: red;
+    position: absolute;
+}
 
-.bfore {width: 100%; font-size: 15pt; font-weight: 500; margin: 0 0 20px 0;}
+.bfore {
+    width: 100%;
+    font-size: 15pt;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
 
+#wrap1 {
+    margin: 40px 0 80px 0;
+}
 
-#wrap1 .content { display: flex; flex-flow: row nowrap; justify-content: space-between;}
+#wrap1 .content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
 
 div.ChartIn {
-    width: 73%; height: 600px; display: flex;
-    flex-flow: row wrap; justify-content: space-between; align-content: space-between;}
+    width: 73%;
+    height: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
 
-div.ChartIn div { width: 49%; height: 17%; display:flex; position:relative; justify-content: space-between;}
-div.ChartIn div:hover {background: #f0f0f0;}
+div.ChartIn div {
+    width: 49%;
+    height: 17%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0);
+}
 
-
-div.ChartIn div button {font-size: 25px; background-color: rgba(0,0,0,0); border:none;margin-right:20px; cursor:pointer; color:#c4c4c4}
-
-div.ChartIn div button:hover {color:#757575}
-
-
-.ChartIn div div p {padding-top:10px; padding-left:15px; overflow:hidden; white-space: nowrap; text-overflow:ellipsis; font-size:10pt; }
-.ChartIn p span {font-size:18PX;}
-div.ChartIn div div {height:100%; width:80%; display:flex; justify-content: flex-start;}
-div.ChartIn img[alt="hover"] {position:absolute; height:100%; opacity:0; transition: 0.2s;}
-div.ChartIn img[alt="hover"]:hover {opacity:1; cursor:pointer;}
-
-
-div.MyMelon { width: 25%; height: 450px; display: flex;
-     flex-flow: column wrap; align-items: center; }
-
-div.MyMelon div { width: 200px; height: 200px; background-color: brown;
-    border-radius: 300px; margin-top: 20px; overflow:hidden;}
-
-    .MyMelon div img {width: 100%;}
-    
-    .MyMelon .name {padding-top:20px; line-height: 35px; text-align: center;}
-    .name span {padding:4px 13px; border:1px solid #757575; border-radius: 20px; font-size:12px;}
-    .name img {width:12px; height:12px; cursor:pointer;}
+.chart:hover {
+    background: #f0f0f0;
+}
 
 
-#wrap2 .content { margin:20px auto 80px auto; display: flex;
-    flex-flow: row nowrap; justify-content: space-between;}
+div.ChartIn div button {
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #c4c4c4
+}
+
+div.ChartIn div button:hover {
+    color: #757575
+}
 
 
-div.video { width: 100%; display: flex;
-    flex-flow: row wrap; justify-content: space-between; align-content: space-between; }
+.ChartIn div div p {
+    padding-top: 10px;
+    padding-left: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 10pt;
+}
 
-div.video div { width: 32%; height: 40%; font-size:12px;}
-div.video div span {font-weight:500; color:#00CD3C}
-div.video div img {width:100%; }
+.ChartIn p span {
+    font-size: 18PX;
+}
 
+div.ChartIn div div {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+}
 
-#wrap3 {line-height: 30px;}
-#wrap3 .content {display:flex; flex-flow:row wrap; justify-content: space-between; align-items: flex-start; margin-bottom:20px; position:relative;}
-#wrap3 p {width: 100%; line-height: 20px;}
-#wrap3:first-child p {line-height:25px;}
-#wrap3 .content > div {width:19%; height:80%;}
+div.ChartIn img[title="hover"] {
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+    transition: 0.2s;
+}
 
-#wrap3 div div p span {font-size:12px; opacity:0.7;}
-#wrap3 div div img { width:100%;}
-
-.dj {color:#919191}
-.dj span{font-weight:500; color:#00CD3C;}
-
-.tag { font-size: 10pt; padding:5px 10px; border-radius: 50px; border:1px solid #919191}
-
-.group {padding-top: 0px;}
-
-
-#wrap4 {width: 100%; margin:100px 0 180px 0; }
-#wrap4 img {width:100%;}
-
-.player .content {width:100%; height:85px; background-color: green; position:fixed; bottom:0;}
-
-.come {width:80px; height:100px; background-color: yellowgreen; position:fixed;
-    bottom: 15px; right:10%; border-radius:18px; padding:5px; text-align: center;}
-
-    #wrap4 {overflow:hidden;}
-    #wrap4 img {height:100%;}
-
-    .player .content {margin:0 auto;}
-    .player img {height:90%;}
+div.ChartIn img[title="hover"]:hover {
+    opacity: 1;
+    cursor: pointer;
+}
 
 
-    @media screen and (min-width:1100px) {
-        div.ChartIn img[alt="plus"] {display:block; scale: 0.8;}
+div.MyMelon {
+    width: 25%;
+    height: 450px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+div.MyMelon div {
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    border-radius: 300px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.MyMelon div img {
+    width: 100%;
+}
+
+.MyMelon .name {
+    padding-top: 20px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.name span {
+    padding: 4px 13px;
+    border: 1px solid #757575;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.name img {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+
+#wrap2 {
+    margin: 60px 0;
+}
+
+#wrap2 .content {
+    margin: 20px auto 80px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+
+div.video {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+div.video div {
+    width: 32%;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+div.video div span {
+    font-weight: 500;
+    color: #00CD3C
+}
+
+div.video div img {
+    width: 100%;
+}
+
+
+#wrap3 {
+    line-height: 30px;
+    margin: 60px 0;
+}
+
+#wrap3 .content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+#wrap3 p {
+    width: 100%;
+    line-height: 20px;
+}
+
+#wrap3:first-child p {
+    line-height: 25px;
+}
+
+#wrap3 .content>div {
+    width: 19%;
+    height: 80%;
+}
+
+#wrap3 div div p span {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+#wrap3 div div img {
+    width: 100%;
+}
+
+.dj {
+    color: #919191
+}
+
+.dj span {
+    font-weight: 500;
+    color: #00CD3C;
+}
+
+.tag {
+    font-size: 10pt;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid #919191
+}
+
+.group {
+    padding-top: 0px;
+}
+
+
+#wrap4 {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 150px;
+}
+
+#wrap4 img {
+    width: 100%;
+}
+
+.player {
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    box-shadow: 0 0 4px;
+    position: fixed;
+    bottom: 0;
+}
+
+.player .content {
+    display: flex;
+    flex-flow:row nowrap;
+    align-items: center;
+}
+
+.player img {
+    width: 65px;
+    height: 65px;
+    margin-top: 5.5px;
+}
+
+#title {font-size:14pt; font-weight: 500;}
+#singer {font-size:10pt;}
+
+
+@media screen and (min-width:1100px) {
+    div.ChartIn img[alt="plus"] {
+        display: block;
+        scale: 0.8;
+    }
+}
+
+
+@media screen and (max-width:1099px) {
+    .content {
+        width: 90%;
     }
 
-    
-@media screen and (max-width:1099px) {
-    .content {width:90%;}
+    #btn2.search {
+        width: 200px;
+        border: 1px solid #00CD3C;
+    }
+
+    #header li {
+        font-size: 1.3em;
+    }
+
+    #wrap3 {
+        margin: 5% 0;
+    }
+
+    #wrap3 .content>div {
+        width: 24%;
+        height: 80%;
+    }
+
+    #wrap3 .content>div:last-of-type {
+        display: none;
+    }
+
 }
 
-@media screen and (max-width:700px){
-    .content {width: 90%;}
+@media screen and (max-width:700px) {
+    .content {
+        width: 90%;
+    }
+
+    #btn,
+    #btn2 {
+        margin-top: 10px;
+    }
 
     #header ul {
-        display: flex; flex-flow: row wrap; text-align: center;}
-    #header li { width:28%; font-size: 1.2em; padding:7px;}
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        margin-top: 30px;
+    }
 
-    #wrap1 .content {flex-flow:row wrap;}
-    
+    #header li {
+        width: 28%;
+        font-size: 1.2em;
+        padding: 7px;
+    }
+
+    #wrap1 .content {
+        flex-flow: row wrap;
+    }
+
+    #wrap1 {
+        margin: 20px 0;
+    }
+
     div.ChartIn {
-        width: 100%; height: 400px;display: flex;
-        flex-flow: row wrap; justify-content: space-between; align-content: space-between;}
-    
-    div.ChartIn div { width: 50%; height: 20%; }
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
 
-    div.ChartIn div img {height: 95%;}
-    div.ChartIn img[alt="hover"] {height:95%;}
+    div.ChartIn div {
+        width: 50%;
+        height: 20%;
+    }
 
-    div.MyMelon { margin-top:70px; width: 100%; height:200px; display: flex;
-        flex-flow: row wrap; justify-content: left; align-content: center;}
-   
-   div.MyMelon div { width: 150px; height: 150px; background-color: brown;
-       border-radius: 300px; margin-top: 0; margin-left:20px;}
+    div.ChartIn div img {
+        height: 95%;
+    }
 
-       .MyMelon .name {padding-top:0px; padding-left:20px; text-align: left;}
+    div.ChartIn img[title="hover"] {
+        height: 95%;
+    }
 
-       
-       #wrap2 .content {flex-flow: row wrap; justify-content: flex-end;}
-    
-    
-    div.video { height: 400px; display: flex;}
-    
-    div.video div { width: 45%; height: 42%;overflow:hidden;}
-    div.video div img {max-height: 144px;;}
+    div.MyMelon {
+        margin-top: 80px;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: left;
+        align-content: center;
+    }
 
-    
-#wrap3 {margin:80px 0;}
-#wrap3 p {width: 100%;}
-#wrap3 .content > div {width:45%; height:80%;}
+    div.MyMelon div {
+        width: 150px;
+        height: 150px;
+        background-color: brown;
+        border-radius: 300px;
+        margin-top: 0;
+        margin-left: 20px;
+    }
 
-#wrap3 .content > div:last-of-type{display:none;}
+    .MyMelon .name {
+        padding-top: 0px;
+        padding-left: 20px;
+        text-align: left;
+    }
 
-#wrap4 {height:300px;}
-#wrap4 img {height:150%;}
+
+    #wrap2 .content {
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+
+    #wrap2 .bfore {
+        margin: 0;
+    }
+
+
+    div.video {
+        height: 630px;
+        display: flex;
+    }
+
+    div.video div {
+        width: 45%;
+        overflow: hidden;
+    }
+
+
+    #wrap3 p {
+        width: 100%;
+    }
+
+    #wrap3 .content>div {
+        width: 45%;
+        height: 80%;
+    }
+
+    #wrap3 .content>div:last-of-type {
+        display: none;
+    }
+
+    #wrap3 div {
+        margin-bottom: 20px;
+    }
+
+
 
 }
-
