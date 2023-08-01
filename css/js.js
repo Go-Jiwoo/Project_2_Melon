@@ -82,6 +82,7 @@ $(document).ready(function () {
         });
 
     });
+
     
 
 
@@ -97,24 +98,19 @@ $(document).ready(function () {
 
     // 플레이어 재생, 멈춤
     $(".controler img:nth-child(4)").click(function () {
-        let b = $("#cover").attr("length");
+        let b = Number($("#cover").attr("length"));
         console.log(b)
         $(this).toggleClass("during");
         if ($(this).hasClass("during")) {
             $(this).attr("src", "img/player/stop.svg");
             $(".player_length_playing").stop().animate({ width: "100%" }, b);
-            
         } else {
             $(this).attr("src", "img/player/play.svg");
             $(".player_length_playing").stop().animate();
         }
     });
 
-    // $(function(){
-    //     if ($(".player_length_playing").css("width","100%")){
-    //         $
-    //     }
-    // });
 
+    $("p.information").text($(this).prev().attr("song"));
 
 });
