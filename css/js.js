@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    // 다크모드
     $("#btn").click(function () {
         $("*").toggleClass("dark");
         if ($(this).hasClass("dark")) {
@@ -26,6 +27,8 @@ $(document).ready(function () {
         }
     });
 
+
+    // 검색창
     $("#btn2 img").click(function () {
         $("div").toggleClass("search");
         if ($("div #btn2").hasClass("search")) {
@@ -33,6 +36,23 @@ $(document).ready(function () {
         } else { $("input").css("display", "none") }
     });
 
+
+    // 뮤직웨이브 광고 이미지 로드
+    $(document).ready(function () {
+        if ($("#Main_Page").width() <= 1099) {
+            if ($("#Main_Page").width() <= 700) {
+                $("#wrap4 img").attr("src", "img/musicwave/muwa2.svg");
+            } else {
+                $("#wrap4 img").attr("src", "img/musicwave/muwa3.svg");
+            }
+        } else {
+            $("#wrap4 img").attr("src", "img/musicwave/muwa.svg");
+        }
+
+    });
+
+
+    // 뮤직웨이브 광고 이미지 리사이즈
     $(window).resize(function () {
         if ($("#Main_Page").width() <= 1099) {
             if ($("#Main_Page").width() <= 700) {
@@ -46,18 +66,55 @@ $(document).ready(function () {
 
     });
 
+
+
+
+    // 플레이어 정보 변경
     $(function () {
         $(".ChartIn img").click(function () {
+            let a = $(this).prev().attr("length")
+            console.log(a)
             $("#cover").attr("src", $(this).prev().attr("src"));
+            $("#cover").attr("length", a);
             $("#title").text($(this).prev().attr("song"));
             $("#singer").text($(this).prev().attr("singer"));
+            
         });
 
     });
     
-    $(".controler img:nth-child(2)").click(function(){
-       $(this).toggleClass("select1"); 
+
+
+    // 셔플, 반복
+    $(".controler img:nth-child(2)").click(function () {
+        $(this).toggleClass("select1");
     });
+
+    $(".controler img:nth-child(1)").click(function () {
+        $(this).toggleClass("select1");
+    });
+
+
+    // 플레이어 재생, 멈춤
+    $(".controler img:nth-child(4)").click(function () {
+        let b = $("#cover").attr("length");
+        console.log(b)
+        $(this).toggleClass("during");
+        if ($(this).hasClass("during")) {
+            $(this).attr("src", "img/player/stop.svg");
+            $(".player_length_playing").stop().animate({ width: "100%" }, b);
+            
+        } else {
+            $(this).attr("src", "img/player/play.svg");
+            $(".player_length_playing").stop().animate();
+        }
+    });
+
+    // $(function(){
+    //     if ($(".player_length_playing").css("width","100%")){
+    //         $
+    //     }
+    // });
 
 
 });
