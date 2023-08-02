@@ -71,14 +71,22 @@ $(document).ready(function () {
 
     // 플레이어 정보 변경
     $(function () {
+
         $(".ChartIn img").click(function () {
-            let a = $(this).prev().attr("length")
-            console.log(a)
+            let length = $(this).prev().attr("length")
+            let info = "· "+ $(this).prev().attr("min") + ":" + $
+            (this).prev().attr("sec")
             $("#cover").attr("src", $(this).prev().attr("src"));
-            $("#cover").attr("length", a);
+            $("#cover").attr("length", length);
             $("#title").text($(this).prev().attr("song"));
-            $("#singer").text($(this).prev().attr("singer"));
-            
+            $("#singer").html($(this).prev().attr("singer") + info);
+            $(".controler img:nth-child(4)").attr("class","during");
+            $(".controler img:nth-child(4)").attr("src","img/player/stop.svg");
+            let b = Number($("#cover").attr("length"));
+            $(".player_length_playing").stop(true,true).css("width","0");
+            $(".player_length_playing").stop().animate({ width: "100%" }, b, "linear");
+            $(".playing").css("bottom","0");
+
         });
 
     });
@@ -98,12 +106,17 @@ $(document).ready(function () {
 
     // 플레이어 재생, 멈춤
     $(".controler img:nth-child(4)").click(function () {
-        let b = Number($("#cover").attr("length"));
-        console.log(b)
+        let x = $("html").width();
+        let y = $(".player_length_playing").width();
+        let z = ((x - y)/x)
+
+        let a = Number(($("#cover").attr("length")));
+        let b = a * z
+
         $(this).toggleClass("during");
         if ($(this).hasClass("during")) {
             $(this).attr("src", "img/player/stop.svg");
-            $(".player_length_playing").stop().animate({ width: "100%" }, b);
+            $(".player_length_playing").animate({ width: "100%" }, b, "linear");
         } else {
             $(this).attr("src", "img/player/play.svg");
             $(".player_length_playing").stop().animate();
@@ -111,6 +124,19 @@ $(document).ready(function () {
     });
 
 
-    $("p.information").text($(this).prev().attr("song"));
+
+//국내 탑 백 정보 입력
+    $(document).ready(function(){
+        let info = $(".information")
+        for(let i in info){
+         let title = $(info.eq(i).prev().prev()).attr("song");
+         let singer = $(info.eq(i).prev().prev()).attr("singer");
+         let min = $(info.eq(i).prev().prev()).attr("min");
+         let sec = $(info.eq(i).prev().prev()).attr("sec");
+
+         info.eq(i).html(
+            "<span>" + title + "</span>" +"<br>"
+            + singer + " · "+ min + ":" + sec);}
+    });
 
 });
