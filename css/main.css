@@ -8,6 +8,14 @@
     width: 100%;
 }
 
+/* 컨텐츠 사이즈 */
+
+.content {
+    width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
 
 /* 카테고리 제목 */
 
@@ -117,14 +125,7 @@
 }
 
 
-/* 컨텐츠 사이즈 */
 
-.content {
-    width: 1100px;
-    height: auto;
-    margin: 0 auto;
-    position: relative;
-}
 
 
 /* 헤더 */
@@ -426,9 +427,13 @@ div.video div img {
 
 /* 플레이어 */
 
-.player .content {
+
+
+.total {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .playing {
@@ -438,7 +443,7 @@ div.video div img {
     position: fixed;
     bottom: -78px;
     background-color: white;
-    transition:0.3s;
+    transition: 0.3s;
 }
 
 .player_length {
@@ -454,30 +459,43 @@ div.video div img {
     height: 3px;
     background-color: #00CD3C;
     position: fixed;
-    bottom: 75; 
+    bottom: 75;
 }
 
 .player {
-padding: 7px 0 5.5px 0;
+    padding: 8px 0 2px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.detail {
+    height: 100%
+}
+
+.player img.fold {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+}
+
+.player .column {
+    flex-flow: column nowrap;
+    text-align: center;
+    margin: 0;
+    justify-content: flex-start;
 }
 
 .player #info {
     display: flex;
-    flex-flow: row nowrap;
+    transition: 0.3s;
 }
 
-.player .content {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
 
 .player img {
     width: 65px;
     height: 65px;
 }
 
-.controler {margin-top: 3px;}
 
 .controler img {
     width: 20px;
@@ -502,6 +520,14 @@ padding: 7px 0 5.5px 0;
     opacity: 1;
 }
 
+#lyrics {
+    margin-top:30px;
+    height: 550px;
+    overflow: scroll;
+    display:none;
+    text-align: center;
+}
+
 
 
 
@@ -509,10 +535,12 @@ padding: 7px 0 5.5px 0;
     font-size: 14pt;
     font-weight: 500;
     margin-top: 8px;
+    margin-left:15px;
 }
 
 #singer {
     font-size: 10pt;
+    margin-left:15px;
 }
 
 
@@ -524,10 +552,7 @@ padding: 7px 0 5.5px 0;
         scale: 0.8;
     }
 
-    #btn2 input {
-        width: 230px;
-
-    }
+    #btn2 input {width: 230px;}
 }
 
 /* 중간 사이즈 화면 */

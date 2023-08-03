@@ -139,4 +139,27 @@ $(document).ready(function () {
             + singer + " · "+ min + ":" + sec);}
     });
 
+
+        $("img#cover").click(function(){
+            $(".playing").css("transition","1s");
+            $(".playing").toggleClass("detail");
+            $(this).toggleClass("fold");
+            $(".total, #info").toggleClass("column");
+
+            if ($(".playing").hasClass("detail")){
+                $("#lyrics").css("display","block");
+                $(".total").css("margin-top","30px");
+                $(".controler").css("margin-top","20px");
+                $(".infoo").css("margin-top","10px");
+                $("#title, #singer").css("margin-left","0");
+            } else {
+                $("#lyrics").css("display","none");
+                $(".total").css("margin-top","0px");
+                $(".controler").css("margin-top","0px");
+                $(".infoo").css("margin-top","0px");
+                $("#title, #singer").css("margin-left","15px");
+            }
+        });
+        
+
 });
