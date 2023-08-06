@@ -13,8 +13,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script src="css/js.js"></script>
-    <script src="css/lyrics/afterlike.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/lyrics/afterlike.js"></script>
+    <script src="js/lyrics/creamsoda.js"></script>
+    <script src="js/lyrics/cupid.js"></script>
+    <script src="js/lyrics/flower.js"></script>
+    <script src="js/lyrics/roseblossom.js"></script>
+    <script src="js/lyrics/kitsch.js"></script>
+    <script src="js/lyrics/queencard.js"></script>
+    <script src="js/lyrics/sonogong.js"></script>
+    <script src="js/lyrics/spicy.js"></script>
+    <script src="js/lyrics/supershy.js"></script>
 
 </head>
 
@@ -59,7 +68,7 @@
                         <div>
                             <img src="img/album/afterlike.jpg" 
                             song="After Like" singer="IVE" length="176000" min="2" sec="56">
-                            <img src="img/play.svg" title="hover">
+                            <img src="img/play.svg" title="hover" class="play">
                             <p class="information"></p>
                         </div>
                         <button>⋮</button>
@@ -69,7 +78,7 @@
                         <div>
                             <img src="img/album/creamsoda.jpg"
                             song="Cream Soda" singer="EXO" length="186000" min="3" sec="06">
-                            <img src="img/play.svg" title="hover">
+                            <img src="img/play.svg" title="hover" class="play">
                             <p class="information"></p>
                         </div>
                         <button>⋮</button>
@@ -77,9 +86,9 @@
 
                     <div class="chart">
                         <div>
-                            <img src="img/album/cupid.jpg" song="Cupid" singer="Fifty Fifty"
+                            <img src="img/album/cupid.jpg" song="Cupid (Twin Ver.)" singer="Fifty Fifty"
                             length="175000" min="2" sec="55">
-                            <img src="img/play.svg" title="hover">
+                            <img src="img/play.svg" title="hover" class="play">
                             <p class="information"></p>
                         </div>
                         <button>⋮</button>
@@ -87,9 +96,9 @@
 
                     <div class="chart">
                         <div>
-                            <img src="img/album/flower.jpg" song="Flower" singer="Jisoo"
+                            <img src="img/album/flower.jpg" song="꽃 (Flower)" singer="Jisoo"
                             length="175000" min="2" sec="55">
-                            <img src="img/play.svg" title="hover">
+                            <img src="img/play.svg" title="hover" class="play">
                             <p class="information"></p>
                         </div>
                         <button>⋮</button>
@@ -99,7 +108,7 @@
                         <div>
                             <img src="img/album/hikey.jpg" song="건물 사이에 피어난 장미" singer="Hi-key"
                             length="196000" min="3" sec="16">
-                            <img src="img/play.svg" title="hover">
+                            <img src="img/play.svg" title="hover" class="play">
                             <p class="information"></p>
                         </div>
                         <button>⋮</button>
@@ -107,9 +116,9 @@
 
                     <div class="chart">
                         <div>
-                            <img src="img/album/kitch.jpg" song="Kistch" singer="IVE"
+                            <img src="img/album/kitch.jpg" song="Kitsch" singer="IVE"
                             length="196000" min="3" sec="16">
-                            <img src="img/play.svg" title="hover">
+                            <img src="img/play.svg" title="hover" class="play">
                             <p class="information"></p>
                         </div>
                         <button>⋮</button>
@@ -117,9 +126,9 @@
 
                     <div class="chart">
                         <div>
-                            <img src="img/album/queencard.jpg" song="퀸카(Queencard)" singer="I-dle"
+                            <img src="img/album/queencard.jpg" song="퀸카 (Queencard)" singer="I-dle"
                             length="162000" min="2" sec="42">
-                            <img src="img/play.svg" title="hover">
+                            <img src="img/play.svg" title="hover" class="play">
                             <p class="information"></p>
                         </div>
                         <button>⋮</button>
@@ -129,7 +138,7 @@
                         <div>
                             <img src="img/album/sonogong.jpg" song="손오공" singer="Seventeen"
                             length="201000" min="3" sec="21">
-                            <img src="img/play.svg" title="hover">
+                            <img src="img/play.svg" title="hover" class="play">
                             <p class="information"></p>
                         </div>
                         <button>⋮</button>
@@ -139,7 +148,7 @@
                         <div>
                             <img src="img/album/spicy.jpg" song="Spicy" singer="Aespa"
                             length="198000" min="3" sec="18">
-                            <img src="img/play.svg" title="hover">
+                            <img src="img/play.svg" title="hover" class="play">
                             <p class="information"></p>
                         </div>
                         <button>⋮</button>
@@ -149,7 +158,7 @@
                         <div>
                             <img src="img/album/supershy.jpg" song="Super Shy" singer="NewJeans"
                             length="155000" min="2" sec="35">
-                            <img src="img/play.svg" title="hover">
+                            <img src="img/play.svg" title="hover" class="play">
                             <p class="information"></p>
                         </div>
                         <button>⋮</button>
@@ -295,8 +304,8 @@
                             <img id = cover src="img/album/afterlike.jpg" 
                                 song="After Like" singer="IVE" length="176000" min="2" sec="56">
                             <div class="infoo">
-                                <p id="title">After Like</p>
-                                <p id="singer">IVE · 2:56</p>
+                                <p id="title"></p>
+                                <p id="singer"></p>
                             </div>
                         </div>
                         <div class="controler">
@@ -307,7 +316,7 @@
                             <img src="img/player/after.svg" alt="after">
                         </div>
                     </div>
-                    <div id="lyrics"></div>
+                    <p id="lyrics"></p>
                 </div>
             </div>
         </div>
