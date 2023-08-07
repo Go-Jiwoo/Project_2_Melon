@@ -1,6 +1,15 @@
 $(document).ready(function () {
 
-    
+    //플레이어 색상 그라디언트 불러오는 함수
+
+    function grad() {
+        var rgb = $("#cover").attr("color");
+        var bgd = $("html").css("background-color");
+        var color = "linear-gradient(" + bgd + "55%, rgba(" + rgb + ")";
+        console.log(color)
+        $(".playing").css("background", color);
+    };
+
 
     // 다크모드
     $("#btn").click(function () {
@@ -9,25 +18,25 @@ $(document).ready(function () {
             $("#btn img").attr("src", "img/button/dark.png");
             $("div.video div span").css("color", "#ffffff");
             $("#btn2 img").attr("src", "img/button/searchlight.svg");
-            $("html, #btn2 button, #btn2 input, .player").css("background-color", "rgb(34,34,34)");
+            $("html, #btn2 button, #btn2 input, .playing, .playing1").css("background-color", "rgb(34,34,34)");
             $("div.ChartIn .chart").hover(function () {
                 $(this).css("background", "#111111");
             }, function () {
                 $(this).css("background", "rgba(0,0,0,0)");
             });
-            $(".playing").css("background", "#222222");
+            grad();
 
         } else {
             $("#btn img").attr("src", "img/button/light.png");
             $("div.video div span").css("color", "#00CD3C");
             $("#btn2 img").attr("src", "img/button/search.svg");
-            $("html ,#btn2 button, #btn2 input, .player").css("background-color", "#ffffff");
+            $("html ,#btn2 button, #btn2 input, .playing, .playing1").css("background-color", "#ffffff");
             $("div.ChartIn .chart").hover(function () {
                 $(this).css("background", "#f0f0f0");
             }, function () {
                 $(this).css("background", "rgba(0,0,0,0)");
             });
-            $(".playing").css("background", "#ffffff");
+            grad();
         }
     });
 
@@ -38,6 +47,11 @@ $(document).ready(function () {
         if ($("div #btn2").hasClass("search")) {
             $("input").css("display", "block");
         } else { $("input").css("display", "none") }
+    });
+
+
+    $(".chart > ul > li > button").click(function () {
+        $(this).next().stop().fadeToggle();
     });
 
 
@@ -121,6 +135,7 @@ $(document).ready(function () {
                 (this).prev().attr("sec")
 
 
+
             // 이미지 src 정보 변경
             $("#cover").attr("length", length);
             $("#cover").attr("src", $(this).prev().attr("src"));
@@ -128,6 +143,8 @@ $(document).ready(function () {
             $("#cover").attr("singer", $(this).prev().attr("singer"));
             $("#cover").attr("min", $(this).prev().attr("min"));
             $("#cover").attr("sec", $(this).prev().attr("sec"));
+            $("#cover").attr("color", $(this).prev().attr("color"));
+            grad();
 
             // 제목, 가수 변경
             $("#title").text($("#cover").attr("song"));
@@ -143,7 +160,7 @@ $(document).ready(function () {
             $(".player_length_playing").stop().animate({ width: "100%" }, b, "linear");
 
             // 누르면 올라오기
-            $(".playing").css("bottom", "0");
+            $(".playing, .playing1").css("bottom", "0");
 
         });
 
@@ -167,24 +184,28 @@ $(document).ready(function () {
     });
 
 
+    // 플레이어 이미지 클릭하면 정보 변경
     $("img#cover").click(function () {
         $(".playing").css("transition", "1s");
-        $(".playing").toggleClass("detail");
+        $(".playing1").css("transition", "height 1s, opacity 0s");
+        $(".playing, .playing1, .player").toggleClass("detail");
         $(this).toggleClass("fold");
         $(".total, #info").toggleClass("column");
 
         if ($(".playing").hasClass("detail")) {
-            $("#lyrics").css("height","550px");
+            $("#lyrics").css("height", "550px");
             $(".total").css("margin-top", "30px");
             $(".controler").css("margin-top", "20px");
             $(".infoo").css("margin-top", "10px");
             $("#title, #singer").css("margin-left", "0");
+            $(".player").css("transition", "0s");
         } else {
-            $("#lyrics").css("height","0px");
+            $("#lyrics").css("height", "0px");
             $(".total").css("margin-top", "0px");
             $(".controler").css("margin-top", "0px");
             $(".infoo").css("margin-top", "0px");
             $("#title, #singer").css("margin-left", "15px");
+            $(".player").css("transition", "5s");
         }
 
     });

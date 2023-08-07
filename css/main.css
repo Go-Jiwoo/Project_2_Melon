@@ -218,18 +218,31 @@ div.ChartIn div {
 }
 
 
-div.ChartIn div button {
+div.ChartIn button {
     font-size: 25px;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     margin-right: 20px;
     cursor: pointer;
-    color: #c4c4c4
+    color: #c4c4c4;
+    height:100%;
 }
 
-div.ChartIn div button:hover {
+div.ChartIn button:hover {
     color: #757575
 }
+
+.ChartIn .set {
+    display:none;
+}
+
+.chart > ul > li > ul {
+    width:50px; height:100px;
+    position:absolute;
+    top:-50px; right:30px;
+    background-color: #00CD3C;
+}
+.chart > ul > li {width:100%; height:100%}
 
 
 .ChartIn div div p {
@@ -418,15 +431,16 @@ div.video div img {
 #wrap4 {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 150px;
+    margin-bottom: 60px;
+    
 }
 
 #wrap4 img {
     width: 100%;
 }
 
-/* 플레이어 */
 
+/* 플레이어 */
 
 
 .total {
@@ -441,9 +455,17 @@ div.video div img {
     height: 78px;
     box-shadow: 0 0 4px;
     position: fixed;
-    bottom: -78px;
+    bottom: -80px;
     background-color: white;
     transition: 0.3s;
+}
+
+.playing1 {
+    width: 100%;
+    height: 78px;
+    position: fixed;
+    bottom: -80px;
+    background-color: white;
 }
 
 .player_length {
@@ -466,6 +488,8 @@ div.video div img {
     padding: 8px 0 2px 0;
     display: flex;
     justify-content: center;
+    overflow:hidden;
+    height:78px;
 }
 
 .detail {
@@ -533,7 +557,6 @@ div.video div img {
 
 
 
-
 #title {
     font-size: 14pt;
     font-weight: 500;
@@ -546,6 +569,20 @@ div.video div img {
     margin-left: 15px;
 }
 
+
+/* 푸터 */
+footer {height: 200px; border-top: 1px solid #a5a5a5; padding-top: 30px;}
+
+footer .content {display:flex; align-items: flex-start;}
+
+#footer {
+    display:flex; flex-flow: row wrap;
+    
+}
+
+footer p {margin:0 8px; opacity:0.8; font-size: 10pt; font-weight: 300; cursor: default;}
+footer p:first-of-type {font-weight: 500;}
+footer p:hover {opacity:1;}
 
 
 /* 꽉 찬 화면 */
@@ -716,6 +753,7 @@ div.video div img {
         display: none;
     }
 
+    footer p {font-size: 5pt; font-weight: 400;}
 
 
 }
