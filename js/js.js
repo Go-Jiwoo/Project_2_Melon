@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
     //플레이어 색상 그라디언트 불러오는 함수
-
     function grad() {
         var rgb = $("#cover").attr("color");
         var bgd = $("html").css("background-color");
@@ -181,6 +180,10 @@ $(document).ready(function () {
                 "<span>" + title + "</span>" + "<br>"
                 + singer + " · " + min + ":" + sec);
         }
+    });
+
+    $(".list").click(function(){
+        $(".option").toggleClass("open");
     });
 
 

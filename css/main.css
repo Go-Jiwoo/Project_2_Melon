@@ -1,193 +1,49 @@
 @charset "utf-8";
 
-.none {
-    display: none;
-}
+.none {display: none;}
 
-#Main_Page {
-    width: 100%;
-}
-
-/* 컨텐츠 사이즈 */
-
-.content {
-    width: 1100px;
-    height: auto;
-    margin: 0 auto;
-    position: relative;
-}
-
-/* 카테고리 제목 */
-
-.bfore {
-    width: 100%;
-    font-size: 15pt;
-    font-weight: 500;
-    margin: 0 0 20px 0;
-}
-
-/* 메뉴 호버 */
-
-#fromInsideOut li {
-    display: inline-block;
-    cursor: pointer;
-    transition: all 250ms ease-out;
-}
-
-#fromInsideOut li:after {
-    content: "";
-    display: block;
-    border-bottom: 3px solid #00CD3C;
-    transition: all 250ms ease-out;
-    transform: scaleX(0);
-}
-
-#fromInsideOut li:hover {
-    color: #00CD3C
-}
-
-#fromInsideOut li:hover:after {
-    transition: all 250ms ease-out;
-    transform: scaleX(1);
-}
-
-
-/* 다크모드 */
-
-.dark {
-    color: rgb(230, 230, 230);
-}
-
-
-/* 다크모드 버튼 */
-#btn {
-    border: none;
-    background-color: white;
-    outline: none;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    position: absolute;
-    top: 35%;
-    left: 0;
-}
-
-#btn img {
-    width: 20px;
-    height: 20px;
-}
-
-
-/* 검색버튼 */
-
-#btn2.search {
-    width: 300px;
-    border: 1px solid #00CD3C;
-}
-
-#btn2 img {
-    width: 20px;
-    height: 20px;
-}
-
-#btn2 input {
-    font-size: 14px;
-    width: 130px;
-    border: none;
-    outline: none;
-    margin-left: 10px;
-    display: none;
-}
-
-#btn2 button {
-    border: none;
-    background-color: white;
-    outline: none;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-}
-
-#btn2 {
-    width: 35px;
-    height: 35px;
-    border-radius: 30px;
-    border: 1px solid rgba(0, 0, 0, 0);
-    padding: 8px;
-    transition: 0.2s;
-    text-align: right;
-    display: flex;
-    position: absolute;
-    top: 30%;
-    right: 0;
-}
-
-
-
-
-
-/* 헤더 */
-
-#header .content {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-img[alt="logo"] {
-    width: 200px;
-    height: auto;
-    margin: 30px 0 30px 0;
-}
-
-#header ul {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 10px 0 10px 0;
-}
-
-#header li {
-    font-size: 1.5em;
-    font-weight: 400;
-    display: block;
-    overflow: hidden;
-}
-
+#Main_Page {width: 100%;}
 
 /* 뮤비 슬라이더 */
-
 #DJ_Slider {
     width: 100%;
-    height: 70%;
     margin: 20px 0 20px 0;
     overflow: hidden;
     max-height: 700px;
     display: flex;
+    flex-flow:column;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
-#DJ_Slider video {
-    width: 100%;
+#DJ_Slider video {width: 100%;}
+
+#DJ_Slider p {
+    font-size: 15px;
+    position:absolute;
+    bottom:15px;
+    color:rgb(223, 223, 223);
+
 }
 
-#DJ_Slider div {
-    font-size: 50px;
-    color: red;
-    position: absolute;
+#DJ_Slider p a {
+    color: rgb(223, 223, 223);
+    opacity: 0.8;
+    margin-left: 10px;
+    font-size: 11px;
 }
 
+#DJ_Slider p span {
+    color: rgb(223, 223, 223);
+    font-weight: 600;
+}
+
+#DJ_Slider p a:hover {opacity:1;}
 
 
 /* 국내 탑 백 음악 목록 */
-
-#wrap1 {
-    margin: 40px 0 80px 0;
-}
+#wrap1 {margin: 40px 0 80px 0;}
 
 #wrap1 .content {
     display: flex;
@@ -195,7 +51,7 @@ img[alt="logo"] {
     justify-content: space-between;
 }
 
-div.ChartIn {
+div.ChartIn { /* 전체 묶음 */
     width: 73%;
     height: 600px;
     display: flex;
@@ -204,7 +60,7 @@ div.ChartIn {
     align-content: space-between;
 }
 
-div.ChartIn div {
+div.ChartIn div { /* 각 곡 묶음 */
     width: 49%;
     height: 17%;
     display: flex;
@@ -213,12 +69,14 @@ div.ChartIn div {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.chart:hover {
-    background: #f0f0f0;
+div.ChartIn div div { /* 앨범 이미지, 가수, 곡 묶음 */
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
 }
 
-
-div.ChartIn button {
+div.ChartIn button { /* 우측 버튼 */
     font-size: 25px;
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -228,24 +86,11 @@ div.ChartIn button {
     height:100%;
 }
 
-div.ChartIn button:hover {
-    color: #757575
-}
-
-.ChartIn .set {
-    display:none;
-}
-
-.chart > ul > li > ul {
-    width:50px; height:100px;
-    position:absolute;
-    top:-50px; right:30px;
-    background-color: #00CD3C;
-}
-.chart > ul > li {width:100%; height:100%}
+div.ChartIn button:hover {color: #757575}
 
 
-.ChartIn div div p {
+
+.information { /* 곡 가사, 가수 정보 */
     padding-top: 10px;
     padding-left: 15px;
     overflow: hidden;
@@ -254,18 +99,17 @@ div.ChartIn button:hover {
     font-size: 10pt;
 }
 
-.ChartIn p span {
-    font-size: 18PX;
+.information span {font-size: 18PX;}
+
+
+.chart:hover { /* 호버 색상변경 */
+    background: #f0f0f0;
 }
 
-div.ChartIn div div {
-    height: 100%;
-    width: 80%;
-    display: flex;
-    justify-content: flex-start;
-}
+.chart > ul > li {width:100%; height:100%}
 
-img[title="hover"] {
+
+img[title="hover"] { /* 앨범 위 플레이버튼 */
     position: absolute;
     height: 100%;
     opacity: 0;
@@ -279,7 +123,6 @@ img[title="hover"]:hover {
 
 
 /* 마이멜론 내 정보 */
-
 div.MyMelon {
     width: 25%;
     height: 450px;
@@ -288,18 +131,16 @@ div.MyMelon {
     align-items: center;
 }
 
-div.MyMelon div {
+
+div.MyMelon div { /* 프로필사진 */
     width: 200px;
     height: 200px;
-    background-color: brown;
     border-radius: 300px;
     margin-top: 20px;
     overflow: hidden;
 }
 
-.MyMelon div img {
-    width: 100%;
-}
+.MyMelon div img {width: 100%;}
 
 .MyMelon .name {
     padding-top: 20px;
@@ -322,10 +163,7 @@ div.MyMelon div {
 
 
 /* 멜론 인기컨텐츠 */
-
-#wrap2 {
-    margin: 60px 0;
-}
+#wrap2 {margin: 60px 0;}
 
 #wrap2 .content {
     margin: 20px auto 80px auto;
@@ -334,7 +172,6 @@ div.MyMelon div {
     justify-content: space-between;
     align-content: flex-start;
 }
-
 
 div.video {
     width: 100%;
@@ -354,14 +191,11 @@ div.video div span {
     color: #00CD3C
 }
 
-div.video div img {
-    width: 100%;
-}
+div.video div img {width: 100%;}
 
 
 /* 재생목록, 최신음악, 선호음악 */
 /* 같은 css 적용 */
-
 #wrap3 {
     line-height: 30px;
     margin: 60px 0;
@@ -380,9 +214,7 @@ div.video div img {
     line-height: 20px;
 }
 
-#wrap3:first-child p {
-    line-height: 25px;
-}
+#wrap3:first-child p {line-height: 25px;}
 
 #wrap3 .content>div {
     width: 19%;
@@ -394,50 +226,32 @@ div.video div img {
     opacity: 0.7;
 }
 
-#wrap3 div div img {
-    width: 100%;
-}
-
+#wrap3 div div img {width: 100%;}
 
 /* 재생목록 */
-
-/* dj */
-
-.dj {
-    color: #919191
-}
+.dj {color: #919191}
 
 .dj span {
     font-weight: 500;
     color: #00CD3C;
 }
 
-/* 해시태그 */
-
-.tag {
+.tag { /* 해시태그 */
     font-size: 10pt;
     padding: 5px 10px;
     border-radius: 50px;
     border: 1px solid #919191
 }
 
-.group {
-    padding-top: 0px;
-}
 
-
-/* 뮤직웨이브 광고 이미지 */
-
+/* 뮤직웨이브 광고*/
 #wrap4 {
     width: 100%;
     overflow: hidden;
     margin-bottom: 60px;
-    
 }
 
-#wrap4 img {
-    width: 100%;
-}
+#wrap4 img {width: 100%;}
 
 
 /* 플레이어 */
@@ -450,7 +264,7 @@ div.video div img {
     align-items: center;
 }
 
-.playing {
+.playing {/* 전체 요소 */
     width: 100%;
     height: 78px;
     box-shadow: 0 0 4px;
@@ -460,7 +274,7 @@ div.video div img {
     transition: 0.3s;
 }
 
-.playing1 {
+.playing1 { /* 배경색 */
     width: 100%;
     height: 78px;
     position: fixed;
@@ -468,7 +282,7 @@ div.video div img {
     background-color: white;
 }
 
-.player_length {
+.player_length { /* 재생 전체 */
     width: 100%;
     height: 3px;
     background-color: #b1ffc9;
@@ -476,7 +290,7 @@ div.video div img {
     bottom: 75;
 }
 
-.player_length_playing {
+.player_length_playing { /* 재생중인 길이 */
     width: 0%;
     height: 3px;
     background-color: #00CD3C;
@@ -484,45 +298,39 @@ div.video div img {
     bottom: 75;
 }
 
-.player {
+.detail {height: 100%;} /* 화면 전체 채우기 */
+
+.player { /* 내부 요소 묶음 */
     padding: 8px 0 2px 0;
     display: flex;
     justify-content: center;
     overflow:hidden;
-    height:78px;
 }
 
-.detail {
-    height: 100%;
-}
-
-.player img.fold {
+.player img.fold { /* 펼쳤을 때 이미지 */
     width: 200px;
     height: 200px;
     border-radius: 200px;
 }
 
-.player .column {
+.player .column { /* 정렬 변경 토글 */
     flex-flow: column nowrap;
     text-align: center;
     margin: 0;
     justify-content: flex-start;
 }
 
-.player #info {
+.player #info { /* 정보 묶음 */
     display: flex;
     transition: 0.3s;
 }
 
-
-.player img {
+.player img { /* 플레이어 내 앨범 이미지 */
     width: 65px;
     height: 65px;
 }
 
-.controler {
-    height: 20px;
-}
+.controler {height: 20px;}/* 컨트롤러 */
 
 .controler img {
     width: 20px;
@@ -530,22 +338,16 @@ div.video div img {
     cursor: pointer;
 }
 
-.controler img:nth-child(1) {
-    opacity: 0.5;
-}
+.controler img:nth-child(1) {opacity: 0.5;}
 
 .controler img:nth-child(2) {
     opacity: 0.5;
     margin: 0 23px 0 20px;
 }
 
-.controler img:nth-child(4) {
-    margin: 0 20px 0 23px;
-}
+.controler img:nth-child(4) {margin: 0 20px 0 23px;}
 
-.controler img.select1 {
-    opacity: 1;
-}
+.controler img.select1 {opacity: 1;}
 
 #lyrics {
     margin-top: 30px;
@@ -554,8 +356,6 @@ div.video div img {
     text-align: center;
     transition: 1s;
 }
-
-
 
 #title {
     font-size: 14pt;
@@ -570,21 +370,6 @@ div.video div img {
 }
 
 
-/* 푸터 */
-footer {height: 200px; border-top: 1px solid #a5a5a5; padding-top: 30px;}
-
-footer .content {display:flex; align-items: flex-start;}
-
-#footer {
-    display:flex; flex-flow: row wrap;
-    
-}
-
-footer p {margin:0 8px; opacity:0.8; font-size: 10pt; font-weight: 300; cursor: default;}
-footer p:first-of-type {font-weight: 500;}
-footer p:hover {opacity:1;}
-
-
 /* 꽉 찬 화면 */
 
 @media screen and (min-width:1100px) {
@@ -593,53 +378,28 @@ footer p:hover {opacity:1;}
         scale: 0.8;
     }
 
-    #btn2 input {
-        width: 230px;
-    }
+    #btn2 input {width: 230px;}
 }
 
 /* 중간 사이즈 화면 */
 
 @media screen and (max-width:1099px) {
-    .content {
-        width: 90%;
-    }
 
-    #btn2.search {
-        width: 200px;
-        border: 1px solid #00CD3C;
-    }
-
-    #header li {
-        font-size: 1.3em;
-    }
-
-    #wrap3 {
-        margin: 5% 0;
-    }
+    #wrap3 {margin: 5% 0;}
 
     #wrap3 .content>div {
         width: 24%;
         height: 80%;
     }
 
-    #wrap3 .content>div:last-of-type {
-        display: none;
-    }
-
+    #wrap3 .content>div:last-of-type {display: none;}
 }
 
 /* 작은 사이즈 */
-
 @media screen and (max-width:700px) {
-    .content {
-        width: 90%;
-    }
+    .content {width: 90%;}
 
-    #btn,
-    #btn2 {
-        margin-top: 10px;
-    }
+    #btn,#btn2 {margin-top: 10px;}
 
     #header ul {
         display: flex;
@@ -654,13 +414,9 @@ footer p:hover {opacity:1;}
         padding: 7px;
     }
 
-    #wrap1 .content {
-        flex-flow: row wrap;
-    }
+    #wrap1 .content {flex-flow: row wrap;}
 
-    #wrap1 {
-        margin: 20px 0;
-    }
+    #wrap1 {margin: 20px 0;}
 
     div.ChartIn {
         width: 100%;
@@ -676,13 +432,9 @@ footer p:hover {opacity:1;}
         height: 20%;
     }
 
-    div.ChartIn div img {
-        height: 95%;
-    }
+    div.ChartIn div img {height: 95%;}
 
-    div.ChartIn img[title="hover"] {
-        height: 95%;
-    }
+    div.ChartIn img[title="hover"] {height: 95%;}
 
     div.MyMelon {
         margin-top: 80px;
@@ -709,15 +461,12 @@ footer p:hover {opacity:1;}
         text-align: left;
     }
 
-
     #wrap2 .content {
         flex-flow: row wrap;
         justify-content: flex-end;
     }
 
-    #wrap2 .bfore {
-        margin: 0;
-    }
+    #wrap2 .bfore {margin: 0;}
 
 
     div.video {
@@ -730,30 +479,20 @@ footer p:hover {opacity:1;}
         overflow: hidden;
     }
 
-
-    #wrap3 p {
-        width: 100%;
-    }
+    #wrap3 p {width: 100%;}
 
     #wrap3 .content>div {
         width: 45%;
         height: 80%;
     }
 
-    #wrap3 .content>div:last-of-type {
-        display: none;
-    }
+    #wrap3 .content>div:last-of-type {display: none;}
 
-    #wrap3 div {
-        margin-bottom: 20px;
-    }
+    #wrap3 div {margin-bottom: 20px;}
 
     .controler img:nth-child(1),
-    .controler img:nth-child(2) {
-        display: none;
-    }
+    .controler img:nth-child(2) {display: none;}
 
     footer p {font-size: 5pt; font-weight: 400;}
-
 
 }
