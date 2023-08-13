@@ -51,15 +51,147 @@
                     </ul>
                 </div>
                 <div class="board">
-                    <div class="group">
+                    <div class="group" style="display:none">
                         <p class="product"> 멜론이 준비한 특별한 선물! <span>스트리밍 클럽 첫 달 100원!</span></p>
                         <p class="product_info">첫 달 100원 이벤트로 제공된 이용권은 본인인증된 ID 당 1회만 가입이 가능하며, 둘째 달 부터는 정상가로 결제됩니다. (VAT 별도)</p>
                         <br>
                         <img src="img/sub/recommend.png" alt="100won">
                     </div>
 
-                    <div class="group" style="display:none">
-                        <p class="product"> 스트리밍 플러스 정기결제</p>
+                    <div class="group">
+                        <ul>
+                            <li class="ticket_type">선택한 이용권
+                                <ul>
+                                    <li class="ticket"></li>
+                                </ul>
+                            </li>
+                            <li class="ticket_type"> <p id="premium">무제한 듣기 + 오프라인 재생</p>
+                                <ul>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;스트리밍 플러스 정기결제</p>
+                                        <p>10,900원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;스트리밍 플러스 티켓 30일</p>
+                                        <p>11,400원</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ticket_type"> 무제한 듣기
+                                <ul>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;Hi-Fi 스트리밍클럽 정기결제</p>
+                                        <p>12,000원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;스트리밍클럽 정기결제</p>
+                                        <p>7,900원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;스트리밍 티켓 30일</p>
+                                        <p>8,900원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;모바일 스트리밍클럽 정기결제</p>
+                                        <p>6,900원</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ticket_type"> MP3 다운 + 무제한 듣기
+                                <ul>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;MP3 10 플러스 정기결제</p>
+                                        <p>14,500원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;MP3 10 플러스 티켓 30일</p>
+                                        <p>15,900원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;MP3 30 플러스 정기결제</p>
+                                        <p>25,900원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;MP3 30 플러스 티켓 30일</p>
+                                        <p>29,900원</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ticket_type"> MP3 다운
+                                <ul>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;MP3 10 정기결제</p>
+                                        <p>6,600원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;MP3 10 티켓 30일</p>
+                                        <p>7,000원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;MP3 30 정기결제</p>
+                                        <p>18,000원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;MP3 30 티켓 30일</p>
+                                        <p>21,000원</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ticket_type"> 횟수 듣기
+                                <ul>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;300회 듣기 정기결제</p>
+                                        <p>4,800원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;300회 듣기 30일</p>
+                                        <p>5,300원</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ticket_type"> 어학 전용 이용권
+                                <ul>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;어학 프리클럽 정기결제</p>
+                                        <p>5,000원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;어학 프리티켓 30일</p>
+                                        <p>5,500원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;어학 스트리밍클럽 정기결제</p>
+                                        <p>3,000원</p>
+                                    </li>
+                                    <li class="ticket">
+                                        <p><input type="radio" name="check">&nbsp;&nbsp;&nbsp;어학 스트리밍티켓 30일</p>
+                                        <p>3,500원</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ticket_type">개별곡 다운로드
+                                <ul>
+                                    <li class="ticket">
+                                        <p>월정액 이용권 없이도 1곡씩<br>
+                                            다운로드 가능합니다.</p>
+                                        <p id="right">MP3 다운로드 | 700원<br>
+                                            FLAC 다운로드 | 1,000원</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ticket_type">뮤직비디오 다운로드
+                                <ul>
+                                    <li class="ticket">
+                                        <p>고화질 뮤직비디오를<br>
+                                            소장하세요!</p>
+                                        <p id="right">Full HD | 2,000원<br>
+                                            HD | 1,500원<br>
+                                            일반화질 | 1,000원
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

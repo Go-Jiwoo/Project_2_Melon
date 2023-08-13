@@ -18,6 +18,7 @@ $(document).ready(function () {
         $(".group").eq(a).show();
         $(".group").eq(a).siblings().hide();
     });
+    
 
 
 });
