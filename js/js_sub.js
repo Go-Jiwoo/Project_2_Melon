@@ -18,7 +18,14 @@ $(document).ready(function () {
         $(".group").eq(a).show();
         $(".group").eq(a).siblings().hide();
     });
-    
+
+    $("input:radio[name=check]").click(function(){
+        let a = $(this).next().html();
+        let b = $(this).parent().next().html();
+        console.log(b)
+            $(".ticket:first p").html(a+"&nbsp;&nbsp;|&nbsp;&nbsp;"+b);
+
+    });
 
 
 });
